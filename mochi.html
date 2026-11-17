@@ -1,0 +1,646 @@
+<html class="light" lang="id" style="scroll-behavior: smooth;"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Boss Mochi Medan | Kelembutan Autentik &amp; Lucu</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#112000",
+                    "surface-container": "#f6ebeb",
+                    "outline-variant": "#d6c2c4",
+                    "surface-bright": "#fff8f7",
+                    "secondary": "#4a6724",
+                    "inverse-surface": "#342f2f",
+                    "on-surface-variant": "#514345",
+                    "secondary-container": "#c8eb98",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#e2d8d7",
+                    "primary-container": "#ffb7c5",
+                    "outline": "#837375",
+                    "on-tertiary-fixed": "#1c1c19",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#ffd9df",
+                    "on-tertiary": "#ffffff",
+                    "background": "#fff8f7",
+                    "on-secondary-container": "#4e6b27",
+                    "on-secondary-fixed-variant": "#334e0d",
+                    "tertiary-fixed-dim": "#c9c6c1",
+                    "tertiary-container": "#cdcac5",
+                    "on-primary-fixed-variant": "#6b3743",
+                    "inverse-primary": "#fbb3c1",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed": "#e6e2dd",
+                    "tertiary": "#605e5b",
+                    "surface-container-low": "#fcf1f1",
+                    "primary": "#864e5a",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#eae0e0",
+                    "on-tertiary-container": "#565551",
+                    "on-secondary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "surface-container-high": "#f0e6e5",
+                    "surface-tint": "#864e5a",
+                    "on-primary-container": "#7b4551",
+                    "primary-fixed-dim": "#fbb3c1",
+                    "on-tertiary-fixed-variant": "#484743",
+                    "on-primary-fixed": "#360c19",
+                    "inverse-on-surface": "#f9eeee",
+                    "surface": "#fff8f7",
+                    "secondary-fixed-dim": "#b0d281",
+                    "on-surface": "#1f1a1b",
+                    "secondary-fixed": "#cbee9b",
+                    "on-background": "#1f1a1b",
+                    "surface-container-highest": "#eae0e0"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "2xl": "2rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "24px",
+                    "section-gap": "120px",
+                    "section-gap-mobile": "80px",
+                    "base": "8px",
+                    "gutter": "32px",
+                    "container-max": "1200px"
+            },
+            "fontFamily": {
+                    "label-md": ["DM Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "display-lg-mobile": ["Plus Jakarta Sans"],
+                    "body-md": ["DM Sans"],
+                    "headline-md-mobile": ["Plus Jakarta Sans"],
+                    "body-lg": ["DM Sans"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "headline-md": ["40px", {"lineHeight": "1.2", "fontWeight": "800"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "900"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "800"}],
+                    "body-lg": ["18px", {"lineHeight": "1.7", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        /* 1. Loading Screen */
+        #loader {
+            position: fixed;
+            inset: 0;
+            background: #fff8f7;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.8s ease-out, visibility 0.8s;
+        }
+        .mochi-bounce {
+            animation: mochi-bounce 0.8s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        }
+        @keyframes mochi-bounce {
+            0% { transform: translateY(0) scaleX(1); }
+            100% { transform: translateY(-20px) scaleX(0.95); }
+        }
+
+        /* 2. Ambient Animations */
+        @keyframes drift {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(15px, -15px) rotate(5deg); }
+            100% { transform: translate(0, 0) rotate(0deg); }
+        }
+        .ambient-float { animation: drift 8s infinite ease-in-out; }
+
+        @keyframes bg-gradient-move {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .animated-hero-bg {
+            background: linear-gradient(-45deg, #fff8f7, #fcf1f1, #fef9f5, #e8f5d6);
+            background-size: 400% 400%;
+            animation: bg-gradient-move 15s ease infinite;
+        }
+
+        /* 5. Product Card & 7. Button Effects */
+        .squishy-button {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .squishy-button:hover {
+            transform: scale(1.08);
+            filter: brightness(1.05);
+            box-shadow: 0 20px 30px -10px rgba(134, 78, 90, 0.3);
+        }
+        .squishy-button:active { transform: scale(0.94); }
+        .btn-glow:hover { box-shadow: 0 0 25px rgba(134, 78, 90, 0.4); }
+
+        .product-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .product-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgba(134, 78, 90, 0.2);
+        }
+        .product-card .shine-effect {
+            position: relative;
+            overflow: hidden;
+        }
+        .product-card .shine-effect::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 20%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.4);
+            transform: rotate(30deg);
+            transition: none;
+            pointer-events: none;
+        }
+        .product-card:hover .shine-effect::after {
+            left: 140%;
+            transition: all 0.7s ease-in-out;
+        }
+
+        /* 6. Reveal Animations */
+        .reveal { opacity: 0; transition: all 1s cubic-bezier(0.21, 0.6, 0.35, 1); }
+        .fade-up { transform: translateY(40px); }
+        .fade-left { transform: translateX(-40px); }
+        .fade-right { transform: translateX(40px); }
+        .reveal.active { opacity: 1; transform: translate(0, 0); }
+
+        /* 9. Nav Underline */
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #864e5a;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+
+        /* 8. Testimonial Carousel */
+        .carousel-track {
+            display: flex;
+            gap: 2.5rem;
+            animation: scroll 40s linear infinite;
+            width: max-content;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .carousel-track:hover { animation-play-state: paused; }
+
+        /* Label Pulse */
+        @keyframes pulse-soft {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.9; }
+        }
+        .pulse-label { animation: pulse-soft 2s infinite ease-in-out; }
+
+        /* 2. Opening/First Load */
+        .brand-load { animation: scale-in 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; transform: scale(0.8); opacity: 0; }
+        @keyframes scale-in { to { transform: scale(1); opacity: 1; } }
+
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* 10. Footer Icon Bounce */
+        .footer-icon:hover {
+            animation: bounce 0.6s;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container opacity-0 transition-opacity duration-1000">
+<!-- 1. Loading Overlay -->
+<div id="loader">
+<div class="mochi-bounce text-6xl mb-4">🍡</div>
+<p class="font-bold text-primary animate-pulse">Preparing your sweet mochi... 🍓</p>
+</div>
+<!-- 9. Navigation -->
+<nav class="fixed top-0 w-full z-50 h-20 transition-all duration-500 ease-in-out" id="main-nav">
+<div class="flex justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto h-full">
+<div class="brand-load font-display-lg text-headline-md-mobile md:text-headline-md text-primary font-black tracking-tighter">Boss Mochi Medan<span class="text-secondary">.</span></div>
+<div class="hidden md:flex items-center gap-10">
+<a class="nav-link font-medium text-on-surface transition-colors" href="#katalog-menu">Menu</a>
+<a class="nav-link font-medium text-on-surface transition-colors" href="#about">Tentang Kami</a>
+<a class="nav-link font-medium text-on-surface transition-colors" href="#testimonials">Testimoni</a>
+<a class="nav-link font-medium text-on-surface transition-colors" href="#contact">Kontak</a>
+<a class="squishy-button btn-glow bg-primary text-on-primary px-8 py-3 rounded-full font-bold shadow-lg shadow-primary/20" href="https://wa.me/6281265541219">Pesan Sekarang</a>
+</div>
+<button class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined text-3xl">menu_open</span>
+</button>
+</div>
+</nav>
+<main class="overflow-hidden">
+<!-- 3 & 4. Hero Section -->
+<section class="animated-hero-bg relative min-h-screen flex items-center pt-20 px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<!-- Floating Elements Background -->
+<div class="absolute top-1/4 -left-20 w-64 h-64 bg-primary-container/30 rounded-full blur-3xl -z-10 ambient-float"></div>
+<div class="absolute bottom-1/4 -right-20 w-80 h-80 bg-secondary-container/30 rounded-full blur-3xl -z-10 ambient-float" style="animation-delay: -2s"></div>
+<span class="material-symbols-outlined ambient-float text-4xl text-primary/30 absolute top-40 left-10">flare</span>
+<span class="material-symbols-outlined ambient-float text-2xl text-secondary/40 absolute top-1/2 right-20" style="animation-delay: -1.5s">auto_awesome</span>
+<span class="absolute bottom-40 left-1/3 text-4xl ambient-float opacity-20">🍓</span>
+<span class="absolute top-20 right-1/4 text-3xl ambient-float opacity-20" style="animation-delay: -4s">🍡</span>
+<div class="flex flex-col md:flex-row items-center gap-16 w-full">
+<div class="w-full md:w-1/2 flex flex-col gap-10 reveal fade-up active">
+<div class="flex flex-col gap-6">
+<div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-primary-container/30 text-primary font-bold text-sm border border-primary/10 w-fit animate-bounce">
+<span class="material-symbols-outlined text-lg">potted_plant</span>
+                        Jajanan Viral Medan
+                    </div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg leading-[1.05] text-on-surface">
+                        Kelembutan <span class="text-primary italic">Mochi</span> Autentik di Setiap Gigitan
+                    </h1>
+</div>
+<p class="text-on-surface-variant text-xl leading-relaxed max-w-[540px] transition-opacity duration-1000 delay-300">
+                    Dibuat secara tradisional dengan bahan pilihan untuk menciptakan tekstur kenyal yang sempurna dan rasa yang memikat jiwa.
+                </p>
+<div class="flex flex-wrap gap-5 reveal fade-up active" style="transition-delay: 600ms">
+<a class="squishy-button btn-glow bg-secondary text-on-secondary px-10 py-5 rounded-2xl font-bold text-lg flex items-center gap-3 shadow-xl shadow-secondary/20" href="https://wa.me/6281265541219">
+                        Pesan Sekarang
+                        <span class="material-symbols-outlined">arrow_outward</span>
+</a>
+<a class="px-10 py-5 rounded-2xl border-2 border-outline/20 text-on-surface font-bold text-lg hover:bg-white/50 hover:border-primary/40 transition-all text-center flex items-center justify-center" href="#katalog-menu">
+                        Lihat Menu
+                    </a>
+</div>
+</div>
+<div class="w-full md:w-1/2 relative reveal fade-right active" style="transition-delay: 400ms">
+<div class="absolute inset-0 bg-primary-container/20 rounded-[4rem] rotate-3 -z-10 blur-2xl animate-pulse"></div>
+<div class="relative group ambient-float" style="animation-duration: 6s">
+<img alt="Boss Mochi Medan Stall" class="w-full aspect-[4/5] object-cover rounded-[3rem] shadow-2xl transition-transform duration-700 group-hover:scale-[1.05]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJJUZ2kgGm7HhqhydbAehwzKSMCHvqdkjpaYcQ6kOIjSoVt4suhdG8epc7QJPqsRCEOEHN-l0IMm01eXvkADPzoAsYt6YpGFqdnZ70v8W3UdnM3Ftk_QSSVg3DsZgWzff_Z0NPoWhymzIMEzkv_PzUznEtjgwDwa85pTTJ0am_jjQfbrNzHq7eqt94JjHRimukH4l5Q3lQ9Di-D2Xf6sWgY1X3shlC3jvStvKDwxCQNqNs0OqdEFyima49QSM9P7s6x0WtYkI7wJXh"/>
+<div class="absolute -bottom-10 -left-10 bg-white/90 backdrop-blur-md p-6 rounded-3xl shadow-xl flex items-center gap-5 border border-white/50 pulse-label">
+<div class="w-14 h-14 bg-secondary-container rounded-2xl flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-3xl" style='font-variation-settings: "FILL" 1;'>favorite</span>
+</div>
+<div>
+<div class="font-black text-on-surface text-lg">Favorite Item</div>
+<div class="text-sm text-on-surface-variant font-medium">Strawberry Choco</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Story Section -->
+<section class="bg-surface-container-low py-section-gap-mobile md:py-section-gap relative overflow-hidden" id="about">
+<div class="absolute top-0 right-0 p-20 opacity-5">
+<span class="material-symbols-outlined text-[300px]" style="animation: scroll 60s linear infinite;">bakery_dining</span>
+</div>
+<div class="px-margin-mobile md:px-gutter max-w-container-max mx-auto flex flex-col md:flex-row gap-20 items-center">
+<div class="w-full md:w-1/2 flex flex-col gap-4 reveal fade-left">
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-6">
+<div class="relative group overflow-hidden rounded-[2.5rem]">
+<img alt="Brand Identity" class="w-full aspect-square object-cover shadow-lg group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU2TZhMd0FYdVs7X8Aw1DBjsUlccdK3ix5nO9B-5zXS7cESMARD1LCBrvU1dVKccSqr3ZUXDJH2Aq1o-bpEn5xIfH3pPGq4D7vaU4deL5UZTxh14bQF3C4DMyd_zhvl2OECXdseZgOFOoLPPiWvPw9Cf8QzuBZ_mtZb2Yo-SUwkuB78_TXtC75uYToMey0mlEmqZI8-vgeLLcsLGu0ENytAocBrtBVDv_JNeHQzEaZvjWs_34BzHi2C-B2ieJbDYrJfoSt4z59OotK"/>
+<div class="absolute -top-3 -right-3 p-2 bg-white rounded-full shadow-md animate-bounce"><span class="material-symbols-outlined text-primary">heart_plus</span></div>
+</div>
+<div class="bg-primary-container/40 p-8 rounded-[2.5rem] text-on-primary-container flex flex-col justify-center border border-primary/10 transition-transform hover:scale-95 duration-500">
+<div class="text-5xl font-black mb-2">100%</div>
+<div class="text-sm font-bold opacity-70 uppercase tracking-widest leading-tight">Alami &amp; Tanpa Pengawet</div>
+</div>
+</div>
+<div class="pt-12">
+<img alt="Fresh Mochi" class="w-full aspect-[2/3] object-cover rounded-[2.5rem] shadow-lg hover:-translate-y-4 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRJJ3dqq_RJKhBw13vIdFg2TtP40VnDuwMeytuEcm2hcEcKyjwmV02cW_e2-BCoa7nhj6X561z-kSb8PzXwPJa5YCWgbVYLfzeI8vEfWbP0WI1ZBV5aIqwwJ8XQ8_LMzv7fywy_A_IFTQS0qInpFJ9kqKknqqrndyYEbNt3hcoF_KpLqJQNqLQwYXIMKbbmuyuIAMngtyL7DNzzXIINgOMdfGT9gBKntUK8xkBvjUAy6ZM-jP3BZGRkbNYlMOFjgVaZaP30s61x5sf"/>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2 flex flex-col gap-10 reveal fade-right">
+<div class="space-y-6">
+<h2 class="font-headline-md text-headline-md-mobile md:text-headline-md text-on-surface leading-tight">
+                        Kisah di Balik Setiap <span class="text-primary underline decoration-primary/20 underline-offset-8">Bulatan Lembut</span>
+</h2>
+<p class="text-xl text-on-surface-variant leading-relaxed">
+                        Berawal dari kecintaan kami pada warisan kuliner tradisional Jepang, Boss Mochi Medan lahir untuk membawa pengalaman makan yang menenangkan ke rumah Anda. Setiap mochi kami dibuat dengan tangan (handmade), memastikan tekstur kenyal yang konsisten.
+                    </p>
+<p class="text-xl text-on-surface-variant leading-relaxed">
+                        Kami hanya menggunakan tepung ketan pilihan dan isian segar yang diolah setiap hari. Bagi kami, mochi bukan sekadar camilan; ini adalah bentuk apresiasi terhadap kualitas dan ketulusan rasa.
+                    </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+<div class="flex items-start gap-4 transition-transform hover:translate-x-2 duration-300">
+<div class="p-3 bg-white rounded-2xl shadow-sm text-secondary">
+<span class="material-symbols-outlined text-3xl">shopping_bag</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">Pemesanan Mudah</h4>
+<p class="text-sm text-on-surface-variant">Tersedia di GoFood, GrabFood &amp; WhatsApp</p>
+</div>
+</div>
+<div class="flex items-start gap-4 transition-transform hover:translate-x-2 duration-300">
+<div class="p-3 bg-white rounded-2xl shadow-sm text-secondary">
+<span class="material-symbols-outlined text-3xl">location_on</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">Lokasi Kami</h4>
+<p class="text-sm text-on-surface-variant">Jln Tuasan No 180 Pancing, Medan</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Menu Section -->
+<section class="py-section-gap-mobile md:py-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto relative" id="katalog-menu">
+<div class="text-center mb-20 flex flex-col gap-6 reveal fade-up">
+<div class="flex justify-center items-center gap-3">
+<span class="w-12 h-[2px] bg-primary/20"></span>
+<span class="text-primary font-bold tracking-widest text-sm uppercase">Pilihan Menu</span>
+<span class="w-12 h-[2px] bg-primary/20"></span>
+</div>
+<h2 class="font-headline-md text-headline-md-mobile md:text-headline-md text-on-surface">Menu Favorit Kami ✨</h2>
+<p class="text-on-surface-variant text-lg max-w-[600px] mx-auto">Pilih kebahagiaanmu dalam satu kotak mochi istimewa dengan berbagai varian rasa premium.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-16">
+<!-- Oreo Choco -->
+<div class="product-card group flex flex-col bg-white rounded-[2.5rem] overflow-hidden border border-outline-variant/10 reveal fade-up">
+<div class="shine-effect relative overflow-hidden aspect-[4/5]">
+<img alt="Oreo Choco" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIMwsDs4yyOz7xMmqepVe2OnFk8PBuFaSl1raeaWBjneeO5rqZy5V00vrCjlIhxMR4ZtusJyQkgbVn6maCuhYNeUmlRKKUAv7M6U7NxSzGiP4qpd-_VsutWZeMFhXFXXba6qD0biz0dsfhij8YfeoUNZSQ1B48WTh9tlKETZ2009xFxxEwQSDgjsIi4XfLmIb0bmrszsxh1c-LA1kdM7nMtnFfEoJJ03WlDyr6q_ohrJHdH8paqomfKLj0HMRn5WQyPnzmyfR2l4Bc"/>
+<div class="pulse-label absolute top-6 right-6 px-4 py-1.5 bg-secondary text-on-secondary rounded-full font-bold text-xs uppercase tracking-widest shadow-lg">Recommended</div>
+</div>
+<div class="p-10 flex flex-col gap-6">
+<div class="space-y-3">
+<div class="flex justify-between items-baseline">
+<h3 class="text-2xl text-on-surface font-black">Oreo Choco</h3>
+<span class="font-bold text-primary text-xl">Rp 7.000</span>
+</div>
+<p class="text-on-surface-variant text-base leading-relaxed">Mochi lembut dengan balutan biskuit oreo dan krim vanilla yang gurih.</p>
+</div>
+<a class="squishy-button w-full py-4 bg-secondary text-on-secondary rounded-2xl font-bold flex items-center justify-center gap-3" href="https://wa.me/6281265541219?text=Halo%20Bos%20Mochi%20Medan,%20saya%20ingin%20membeli%20Oreo%20Choco">
+<span class="material-symbols-outlined text-xl">shopping_cart</span> Beli Sekarang
+                    </a>
+</div>
+</div>
+<!-- Creamy Mango -->
+<div class="product-card group flex flex-col bg-white rounded-[2.5rem] overflow-hidden border border-outline-variant/10 reveal fade-up" style="transition-delay: 100ms">
+<div class="shine-effect relative overflow-hidden aspect-[4/5]">
+<img alt="Creamy Mango" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBP_87uAbYezztMvp0X4IvsBnFS3Olb4SON0j3N4P3OH9WSm-pLeU2woJ83f600e0B7Q0LKG-pwjE07I6ESHXTXJjWhWQueHkEIMH8pY8NopXMBqAO5uqrjZD-txyZvtXqUghxKYsIr1_lk8Z7qT6Ekm1EdREqzkmU-1sptNRsxptqVTeAM9kUHHLO2qFY3x3FV-_6U3o4Td80wgWM8XaVXhpgk2wJn4pP0XV-WNWjVFdwoYwaRp19Kzucfll0TM9S2zxESpUuV17Gj"/>
+<div class="pulse-label absolute top-6 right-6 px-4 py-1.5 bg-primary text-on-primary rounded-full font-bold text-xs uppercase tracking-widest shadow-lg">Popular</div>
+</div>
+<div class="p-10 flex flex-col gap-6">
+<div class="space-y-3">
+<div class="flex justify-between items-baseline">
+<h3 class="text-2xl text-on-surface font-black">Creamy Mango</h3>
+<span class="font-bold text-primary text-xl">Rp 6.000</span>
+</div>
+<p class="text-on-surface-variant text-base leading-relaxed">Isian mangga segar pilihan dengan kulit mochi yang kenyal sempurna.</p>
+</div>
+<a class="squishy-button w-full py-4 bg-secondary text-on-secondary rounded-2xl font-bold flex items-center justify-center gap-3" href="https://wa.me/6281265541219?text=Halo%20Bos%20Mochi%20Medan,%20saya%20ingin%20membeli%20Creamy%20Mango">
+<span class="material-symbols-outlined text-xl">shopping_cart</span> Beli Sekarang
+                    </a>
+</div>
+</div>
+<!-- Matcha Premium -->
+<div class="product-card group flex flex-col bg-white rounded-[2.5rem] overflow-hidden border border-outline-variant/10 reveal fade-up" style="transition-delay: 200ms">
+<div class="shine-effect relative overflow-hidden aspect-[4/5]">
+<img alt="Matcha Premium" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlk7Abbd9HIU7op4JJVMbhOgiAa4dZqSyV6k4J1rR8nnphRMSXQviD9CFJOpMwL8508boolMXXECnHGCkSegnRPzfklxT6towe23YI-RkAD2FuuK3GaWS7Muh_oZWPSK-95H9rpa5bFGThDhAA1_dIqX1RgTFOheTESY_w0J4M18Zjq66vmKqUHe38PaInBfLF6KLf_fnxi6Qv4XZaYe2TffihGIyU0umwbzRQ_S6rGHQCcQfChWsZXGmw3yFx4HnR_0iLjR6gNmKq"/>
+<div class="pulse-label absolute top-6 right-6 px-4 py-1.5 bg-secondary-container text-secondary rounded-full font-bold text-xs uppercase tracking-widest shadow-lg">New Arrival</div>
+</div>
+<div class="p-10 flex flex-col gap-6">
+<div class="space-y-3">
+<div class="flex justify-between items-baseline">
+<h3 class="text-2xl text-on-surface font-black">Matcha Premium</h3>
+<span class="font-bold text-primary text-xl">Rp 7.000</span>
+</div>
+<p class="text-on-surface-variant text-base leading-relaxed">Perpaduan matcha grade-A Jepang dengan tekstur isian yang lumer di mulut.</p>
+</div>
+<a class="squishy-button w-full py-4 bg-secondary text-on-secondary rounded-2xl font-bold flex items-center justify-center gap-3" href="https://wa.me/6281265541219?text=Halo%20Bos%20Mochi%20Medan,%20saya%20ingin%20membeli%20Matcha%20Premium">
+<span class="material-symbols-outlined text-xl">shopping_cart</span> Beli Sekarang
+                    </a>
+</div>
+</div>
+<!-- Strawberry Choco -->
+<div class="product-card group flex flex-col bg-white rounded-[2.5rem] overflow-hidden border border-outline-variant/10 reveal fade-up">
+<div class="shine-effect relative overflow-hidden aspect-[4/5]">
+<img alt="Strawberry Choco" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjxTfVzjyvOriMm5naYLUiTQ_lbawzlqKnB5MLWWZcBWaEvfxD-T5iuvWvIFG7VjwC2kSY2u_g7lcst4anKg0O9CKlbiN0fdNVCKhiGUYlpVMkHAIv8SY0Ojb9EbLy86zLhAhhGTcACX7vblF058jflGH1WkwJAsKdDitUtbKOO8NVQ1s4YijAgpIKUC6ActMCsqMeYv01pZ0yWoWoYBEKcWXULPmlpGVTkMdZvw5iWI5YKKQYoClBDmpZqrBIuvxHAswM1CerLkrI"/>
+<div class="pulse-label absolute top-6 right-6 px-4 py-1.5 bg-primary text-on-primary rounded-full font-bold text-xs uppercase tracking-widest shadow-lg">Best Seller</div>
+</div>
+<div class="p-10 flex flex-col gap-6">
+<div class="space-y-3">
+<div class="flex justify-between items-baseline">
+<h3 class="text-2xl text-on-surface font-black">Strawberry Choco</h3>
+<span class="font-bold text-primary text-xl">Rp 7.000</span>
+</div>
+<p class="text-on-surface-variant text-base leading-relaxed">Kombinasi klasik strawberry segar dan balutan coklat premium mewah.</p>
+</div>
+<a class="squishy-button w-full py-4 bg-secondary text-on-secondary rounded-2xl font-bold flex items-center justify-center gap-3" href="https://wa.me/6281265541219?text=Halo%20Bos%20Mochi%20Medan,%20saya%20ingin%20membeli%20Strawberry%20Choco">
+<span class="material-symbols-outlined text-xl">shopping_cart</span> Beli Sekarang
+                    </a>
+</div>
+</div>
+<!-- Choco Original -->
+<div class="product-card group flex flex-col bg-white rounded-[2.5rem] overflow-hidden border border-outline-variant/10 reveal fade-up" style="transition-delay: 100ms">
+<div class="shine-effect relative overflow-hidden aspect-[4/5]">
+<img alt="Choco Original" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXP5PqaAMhiJ7B2KLC98CcBn6Elz7vVhq_c8rP3h7KZW94BSja-dSlGjVcZi5tecMrAfgMG1uEKcPlmXKgo_LZF7frM2TVitMmRRcZkI7rhtKRTUlK94AHdRm-PgN-OhAX13Mnb4qbKi-Hc-z7mx5zq-Z7hYjKrNtFk5NyvSrKen7ONR9vOU1aET-VVDjWPCQK3ANFhpjM_jSGvahEQJChGaRDmQ9aR-p-DnGqCsvDF-WLzLWAeEuVl_MWgeD1ZA61kUiXPvhBh4Me"/>
+</div>
+<div class="p-10 flex flex-col gap-6">
+<div class="space-y-3">
+<div class="flex justify-between items-baseline">
+<h3 class="text-2xl text-on-surface font-black">Choco Original</h3>
+<span class="font-bold text-primary text-xl">Rp 6.000</span>
+</div>
+<p class="text-on-surface-variant text-base leading-relaxed">Taburan bubuk coklat premium dengan isian coklat yang melimpah.</p>
+</div>
+<a class="squishy-button w-full py-4 bg-secondary text-on-secondary rounded-2xl font-bold flex items-center justify-center gap-3" href="https://wa.me/6281265541219?text=Halo%20Bos%20Mochi%20Medan,%20saya%20ingin%20membeli%20Choco%20Original">
+<span class="material-symbols-outlined text-xl">shopping_cart</span> Beli Sekarang
+                    </a>
+</div>
+</div>
+<!-- Strawberry Matcha -->
+<div class="product-card group flex flex-col bg-white rounded-[2.5rem] overflow-hidden border border-outline-variant/10 reveal fade-up" style="transition-delay: 200ms">
+<div class="shine-effect relative overflow-hidden aspect-[4/5]">
+<img alt="Strawberry Matcha" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH-PMxqD75obiF0SZbcnNPV3FQu9e1PB3swtPy6_oJU005cKQbqtkolwOTi_7SKsEIKbYlbfMVYxmtZc-_Z0MyOtQb7OdilabZvo_UFf7J1C7_Hh8wzLvvGOv19bgpm71HKgdSs7AUFaF4K0ncJlUydrwtj0fwv8ER-Y2VqXEJP0JR81muV-vr9-DSCdddGCQh9Yi9WSyeag2xg_PTSERUgxW_sBILVY7PMRAOD1-yad-Wjn7jA4e0c5NTr2WWwwNQbkCkzlYpKg6E"/>
+</div>
+<div class="p-10 flex flex-col gap-6">
+<div class="space-y-3">
+<div class="flex justify-between items-baseline">
+<h3 class="text-2xl text-on-surface font-black">Strawberry Matcha</h3>
+<span class="font-bold text-primary text-xl">Rp 8.000</span>
+</div>
+<p class="text-on-surface-variant text-base leading-relaxed">Mochi matcha dengan isian strawberry utuh yang manis dan segar.</p>
+</div>
+<a class="squishy-button w-full py-4 bg-secondary text-on-secondary rounded-2xl font-bold flex items-center justify-center gap-3" href="https://wa.me/6281265541219?text=Halo%20Bos%20Mochi%20Medan,%20saya%20ingin%20membeli%20Strawberry%20Matcha">
+<span class="material-symbols-outlined text-xl">shopping_cart</span> Beli Sekarang
+                    </a>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. Testimonials Section -->
+<section class="bg-surface-container-highest/30 py-section-gap-mobile md:py-section-gap relative overflow-hidden" id="testimonials">
+<div class="absolute inset-0 flex items-center justify-between px-20 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-8xl animate-pulse">celebration</span>
+<span class="material-symbols-outlined text-9xl animate-bounce" style="animation-duration: 4s">sentiment_very_satisfied</span>
+</div>
+<div class="px-margin-mobile md:px-gutter max-w-container-max mx-auto relative">
+<div class="text-center mb-20 flex flex-col gap-6 reveal fade-up">
+<h2 class="font-headline-md text-headline-md-mobile md:text-headline-md text-primary">Apa Kata Mereka? 🥰</h2>
+<p class="text-on-surface-variant text-lg max-w-[600px] mx-auto">Ribuan pelanggan telah merasakan kelembutan mochi kami.</p>
+</div>
+<div class="relative overflow-hidden py-10">
+<div class="carousel-track"><div class="bg-white p-10 rounded-[3rem] shadow-sm border border-white w-[400px]"><div class="flex text-primary mb-6"><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span></div><p class="italic text-on-surface text-lg leading-relaxed mb-8">"Teksturnya beneran selembut itu! Belum pernah nemu mochi se-autentik ini di kota ini. Matcha-nya juga berasa banget premiumnya."</p><div class="flex items-center gap-5 border-t border-outline-variant/20 pt-8"><div class="w-12 h-12 rounded-2xl bg-secondary-container flex items-center justify-center font-black text-secondary">SN</div><div><div class="font-bold text-base">Saraswati N.</div><div class="text-xs text-on-surface-variant uppercase tracking-widest font-medium">Food Enthusiast</div></div></div></div><div class="bg-white p-10 rounded-[3rem] shadow-sm border border-white w-[400px]"><div class="flex text-primary mb-6"><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span></div><p class="italic text-on-surface text-lg leading-relaxed mb-8">"Strawberry Choco nya juara. Manisnya pas, strawberry-nya segar dan besar. Packaging-nya juga cantik banget."</p><div class="flex items-center gap-5 border-t border-outline-variant/20 pt-8"><div class="w-12 h-12 rounded-2xl bg-primary-container flex items-center justify-center font-black text-primary">AK</div><div><div class="font-bold text-base">Andra Kusuma</div><div class="text-xs text-on-surface-variant uppercase tracking-widest font-medium">Pecinta Dessert</div></div></div></div><div class="bg-white p-10 rounded-[3rem] shadow-sm border border-white w-[400px]"><div class="flex text-primary mb-6"><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span></div><p class="italic text-on-surface text-lg leading-relaxed mb-8">"Langganan buat acara kantor. Responnya cepat dan kualitasnya selalu stabil. Mochi favorit semua rekan kerja!"</p><div class="flex items-center gap-5 border-t border-outline-variant/20 pt-8"><div class="w-12 h-12 rounded-2xl bg-surface-container-highest flex items-center justify-center font-black text-on-surface-variant">ML</div><div><div class="font-bold text-base">Maya Larasati</div><div class="text-xs text-on-surface-variant uppercase tracking-widest font-medium">Corporate Secretary</div></div></div></div><div class="bg-white p-10 rounded-[3rem] shadow-sm border border-white w-[400px]"><div class="flex text-primary mb-6"><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span></div><p class="italic text-on-surface text-lg leading-relaxed mb-8">"Varian Oreo Choco-nya bener-bener lumer. Kulit mochinya tipis dan isiannya melimpah. Bakal re-order terus!"</p><div class="flex items-center gap-5 border-t border-outline-variant/20 pt-8"><div class="w-12 h-12 rounded-2xl bg-secondary-container flex items-center justify-center font-black text-secondary">RK</div><div><div class="font-bold text-base">Rian K.</div><div class="text-xs text-on-surface-variant uppercase tracking-widest font-medium">Mahasiswa</div></div></div></div><div class="bg-white p-10 rounded-[3rem] shadow-sm border border-white w-[400px]"><div class="flex text-primary mb-6"><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span></div><p class="italic text-on-surface text-lg leading-relaxed mb-8">"Suka banget sama kesegaran buahnya. Gak kerasa kayak pemanis buatan, beneran alami dan sehat buat cemilan anak."</p><div class="flex items-center gap-5 border-t border-outline-variant/20 pt-8"><div class="w-12 h-12 rounded-2xl bg-primary-container flex items-center justify-center font-black text-primary">SW</div><div><div class="font-bold text-base">Sari W.</div><div class="text-xs text-on-surface-variant uppercase tracking-widest font-medium">Ibu Rumah Tangga</div></div></div></div><div class="bg-white p-10 rounded-[3rem] shadow-sm border border-white w-[400px]"><div class="flex text-primary mb-6"><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span></div><p class="italic text-on-surface text-lg leading-relaxed mb-8">"Mochi paling premium di Medan! Udah nyoba banyak tempat tapi Boss Mochi yang paling konsisten kenyalnya."</p><div class="flex items-center gap-5 border-t border-outline-variant/20 pt-8"><div class="w-12 h-12 rounded-2xl bg-surface-container-highest flex items-center justify-center font-black text-on-surface-variant">BH</div><div><div class="font-bold text-base">Budi H.</div><div class="text-xs text-on-surface-variant uppercase tracking-widest font-medium">Kuliner Hunter</div></div></div></div><div class="bg-white p-10 rounded-[3rem] shadow-sm border border-white w-[400px]"><div class="flex text-primary mb-6"><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span></div><p class="italic text-on-surface text-lg leading-relaxed mb-8">"Cocok banget buat hantaran atau kado. Box-nya gemes dan rasa mochinya gak ada lawan ✨"</p><div class="flex items-center gap-5 border-t border-outline-variant/20 pt-8"><div class="w-12 h-12 rounded-2xl bg-secondary-container flex items-center justify-center font-black text-secondary">DN</div><div><div class="font-bold text-base">Dina N.</div><div class="text-xs text-on-surface-variant uppercase tracking-widest font-medium">Traveler</div></div></div></div><div class="bg-white p-10 rounded-[3rem] shadow-sm border border-white w-[400px]"><div class="flex text-primary mb-6"><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span><span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>star</span></div><p class="italic text-on-surface text-lg leading-relaxed mb-8">"Anak-anak suka banget yang Strawberry Matcha. Perpaduannya pas, manis dan ada seger-segernya."</p><div class="flex items-center gap-5 border-t border-outline-variant/20 pt-8"><div class="w-12 h-12 rounded-2xl bg-primary-container flex items-center justify-center font-black text-primary">FA</div><div><div class="font-bold text-base">Fajar A.</div><div class="text-xs text-on-surface-variant uppercase tracking-widest font-medium">Karyawan</div></div></div></div></div>
+</div>
+<!-- Review Form -->
+<div class="mt-24 max-w-2xl mx-auto bg-white p-10 md:p-16 rounded-[4rem] shadow-xl border border-outline-variant/10 reveal fade-up">
+<div class="text-center mb-12 space-y-4">
+<h3 class="font-headline-md text-on-surface">Bagikan Ceritamu 💌</h3>
+<p class="text-on-surface-variant">Kami senang mendengar pengalaman manismu!</p>
+</div>
+<form class="flex flex-col gap-8" onsubmit="event.preventDefault(); alert('Terima kasih atas ulasan manisnya! ❤️');">
+<div class="space-y-2">
+<label class="text-sm font-bold text-on-surface-variant ml-2" for="reviewer-name">Nama Lengkap</label>
+<input class="w-full px-6 py-5 rounded-3xl border border-outline-variant/40 bg-surface-container/30 focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all outline-none text-base" id="reviewer-name" placeholder="Siapa nama kamu?" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-on-surface-variant ml-2" for="rating">Rating Produk</label>
+<div class="relative">
+<select class="w-full px-6 py-5 rounded-3xl border border-outline-variant/40 bg-surface-container/30 focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all outline-none appearance-none text-base cursor-pointer" id="rating">
+<option value="5">⭐⭐⭐⭐⭐ - Suka Banget!</option>
+<option value="4">⭐⭐⭐⭐ - Enak!</option>
+<option value="3">⭐⭐⭐ - Cukup</option>
+</select>
+<span class="material-symbols-outlined absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-on-surface-variant ml-2" for="comment">Ulasanmu</label>
+<textarea class="w-full px-6 py-5 rounded-3xl border border-outline-variant/40 bg-surface-container/30 focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all outline-none resize-none text-base" id="comment" placeholder="Mochi rasa apa yang paling kamu suka?" rows="4"></textarea>
+</div>
+<button class="squishy-button w-full py-5 bg-primary text-on-primary rounded-[2rem] font-bold text-lg shadow-xl shadow-primary/20 flex items-center justify-center gap-3 transition-all" type="submit">
+<span class="material-symbols-outlined">send</span> Kirim Ulasan
+                    </button>
+</form>
+</div>
+</div>
+</section>
+<!-- WhatsApp CTA Section -->
+<section class="px-margin-mobile md:px-gutter max-w-container-max mx-auto py-section-gap-mobile md:py-section-gap" id="contact">
+<div class="relative rounded-[5rem] overflow-hidden bg-secondary p-16 md:p-24 flex flex-col md:flex-row items-center justify-between gap-12 text-on-secondary shadow-2xl reveal fade-up">
+<div class="absolute inset-0 opacity-20 pointer-events-none overflow-hidden">
+<div class="absolute top-0 right-0 w-[400px] h-[400px] bg-white rounded-full blur-[120px] -mr-40 -mt-40 animate-pulse"></div>
+<div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-secondary-fixed rounded-full blur-[120px] -ml-40 -mb-40 animate-pulse" style="animation-delay: 1s"></div>
+</div>
+<div class="flex flex-col gap-8 z-10 w-full md:w-3/5 text-center md:text-left">
+<div class="space-y-4">
+<h2 class="font-display-lg-mobile md:font-headline-md text-display-lg-mobile md:text-headline-md font-black leading-tight">Siap Menikmati Kelembutan Kami! 🍡</h2>
+<p class="text-xl opacity-90 leading-relaxed font-medium">Stok harian kami terbatas. Amankan rasa favoritmu sekarang juga!</p>
+</div>
+</div>
+<div class="z-10 w-full md:w-2/5 flex justify-center md:justify-end">
+<a class="squishy-button btn-glow bg-white text-secondary px-12 py-6 rounded-full font-black text-xl flex items-center gap-4 shadow-2xl" href="https://wa.me/6281265541219?text=Halo%20Bos%20Mochi%20Medan,%20saya%20ingin%20memesan%20mochi%20sekarang!">
+<span class="material-symbols-outlined text-3xl">chat_bubble</span> Pesan Via WhatsApp
+                </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface py-20 border-t border-outline-variant/10">
+<div class="px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-12 mb-16">
+<div class="space-y-4 max-w-sm reveal fade-left">
+<div class="font-display-lg text-headline-md-mobile text-primary font-black tracking-tighter">Boss Mochi<span class="text-secondary"> Medan.</span></div>
+<p class="text-on-surface-variant font-medium">Menghadirkan kebahagiaan melalui kelembutan mochi autentik di setiap harinya.</p>
+<div class="flex gap-4">
+<a class="footer-icon w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="footer-icon w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300" href="#"><span class="material-symbols-outlined">person</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-12 reveal fade-right">
+<div class="space-y-4">
+<h5 class="font-bold uppercase tracking-widest text-xs text-primary">Menu Utama</h5>
+<ul class="space-y-3 text-sm font-medium text-on-surface-variant">
+<li><a class="nav-link w-fit" href="#katalog-menu">Katalog Mochi</a></li>
+<li><a class="nav-link w-fit" href="#about">Tentang Kami</a></li>
+<li><a class="nav-link w-fit" href="#testimonials">Testimoni</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="font-bold uppercase tracking-widest text-xs text-primary">Bantuan</h5>
+<ul class="space-y-3 text-sm font-medium text-on-surface-variant">
+<li><a class="nav-link w-fit" href="#">Cara Order</a></li>
+<li><a class="nav-link w-fit" href="#">Pengiriman</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-on-surface-variant font-medium">
+<div class="reveal fade-up">© 2026 Boss Mochi Medan. Handmade with Love. <span class="animate-pulse">✨</span></div>
+<div class="flex gap-8 reveal fade-up">
+<a class="nav-link" href="#">Kebijakan Privasi</a>
+<a class="nav-link" href="#">Syarat &amp; Ketentuan</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+    // 1. Loading Screen logic
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            const loader = document.getElementById('loader');
+            loader.style.opacity = '0';
+            loader.style.visibility = 'hidden';
+            document.body.classList.remove('opacity-0');
+        }, 1500); // 1.5s duration as requested
+    });
+
+    // 6. Reveal animations on scroll
+    const revealCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(revealCallback, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // 9. Navbar scroll effect
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) {
+            nav.classList.add('bg-white/70', 'backdrop-blur-xl', 'shadow-lg', 'h-16');
+            nav.classList.remove('h-20');
+        } else {
+            nav.classList.remove('bg-white/70', 'backdrop-blur-xl', 'shadow-lg', 'h-16');
+            nav.classList.add('h-20');
+        }
+    });
+</script>
+</body></html>
